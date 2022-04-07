@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="async-drf",  # This is the name of the package
-    version="0.0.1",  # The initial release version
+    version="0.0.3",  # The initial release version
     author="Diyor Khaydarov",  # Full name of the author
     description="Async views and viewsets for DRF",
     long_description=long_description,  # Long description read from the the readme file

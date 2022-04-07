@@ -95,7 +95,8 @@ class AsyncRetrieveModelMixin:
     async def retrieve(self, request, *args, **kwargs):
         instance = await self.get_object()
         serializer = self.get_serializer(instance)
-        return Response(serializer.data)
+        serializer_data = await sync_to_async(getattr)(serializer, 'data')
+        return Response(serializer_data)
 
 
 class AsyncUpdateModelMixin:
